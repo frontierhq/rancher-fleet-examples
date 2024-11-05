@@ -4,5 +4,4 @@ targetCustomizations:
   - clusterSelector: {}
     helm:
       values:
-        clusterName: global.fleet.clusterLabels.management.cattle.io/cluster-display-name
-        # clusterName: "${ .ClusterLabels.management.cattle.io/cluster-name }"
+        clusterName: "global.fleet.clusterLabels.management.cattle.io/cluster-display-name"
