@@ -18,8 +18,8 @@ spec:
         - image: nginx:latest
           name: nginx
           env:
-            - name: NGINX_PORT2
-              value: "80"
+            - name: CLUSTER_NAME
+              value: "{{ .clusterName }}"
           ports:
             - containerPort: 80
               name: web

@@ -1,2 +1,6 @@
 ---
 namespace: hello-world
+targetCustomizations:
+  - clusterSelector: {}
+    values:
+      clusterName: ${ get .ClusterLabels global.fleet.clusterLabels.management.cattle.io/cluster-name }
