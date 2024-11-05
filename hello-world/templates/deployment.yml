@@ -15,14 +15,17 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: nginx:latest
-        name: nginx
-        ports:
-        - containerPort: 80
-          name: web
-        volumeMounts:
-          - name: config-vol
-            mountPath: /etc/nginx/
+        - image: nginx:latest
+          name: nginx
+          env:
+            - name: NGINX_PORT2
+              value: "80"
+          ports:
+            - containerPort: 80
+              name: web
+          volumeMounts:
+            - name: config-vol
+              mountPath: /etc/nginx/
       volumes:
         - name: config-vol
           configMap:
