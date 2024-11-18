@@ -17,9 +17,6 @@ spec:
       containers:
         - image: nginx:latest
           name: nginx
-          env:
-            - name: foo
-              value: barxxasdaasdas
           ports:
             - containerPort: 80
               name: web
