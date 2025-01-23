@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
+  purpose: demo
 spec:
   selector:
     matchLabels:
@@ -13,6 +14,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        purpose: demo
     spec:
       containers:
         - image: nginx:latest
