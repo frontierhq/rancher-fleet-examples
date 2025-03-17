@@ -1,0 +1,7 @@
+---
+namespace: hello-windows
+targetCustomizations:
+  - clusterSelector: {}
+    helm:
+      values:
+        clusterName: global.fleet.clusterLabels.management.cattle.io/cluster-display-name

@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iis
+spec:
+  selector:
+    matchLabels:
+      app: iis
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: iis
+    spec:
+      containers:
+        - image: mcr.microsoft.com/windows/servercore/iis:latest
+          name: iis
+          ports:
+            - containerPort: 80
+              name: web
